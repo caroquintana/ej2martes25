@@ -14,8 +14,12 @@
 	<img src="http://lorempixel.com/output/city-q-c-301-301-9.jpg" alt="" class="mensaje">
 
 
-	<script>
-		//Escribe aquí tu código Javascript
+	<script type="text/javascript">
+		var buscar = document.getElementsByClassName("mensaje").length;
+			document.write(buscar);
+		var enlaces= document.getElementById("num_enlaces");
+		enlaces.innerHTML=buscar;	
+
 	</script>
 </body>
 </html>
