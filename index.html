@@ -16,16 +16,20 @@
 	<span id="num_class"></span>
 
 	<script type="text/javascript">
-		var buscar = document.getElementsByClassName("mensaje").length;
+		var buscar = document.getElementsByClassName("mensaje").length + document.getElementsByClassName("titulo").length;
 		var enlaces= document.getElementById("num_class");
 		enlaces.innerHTML=buscar;	
 
 		if (buscar == 1) {
 			alert("Es muy poco");
-		} else if(buscar > 2 || buscar < 4){
+			enlaces.innerHTML = "Hay " + buscar + " clases: " + "Es muy poco";
+		} else if(buscar <= 3){
 			alert("No está mal");
-		}else if(buscar >5){
-			alert("Son demasiados")
+			enlaces.innerHTML = "Hay " + buscar + " clases: " + "No está mal";
+		}else if(buscar <= 5){
+			alert("Son demasiados");
+			enlaces.innerHTML = "Hay " + buscar + " clases: " + "Son demasiadas";
+
 		};
 
 	</script>
